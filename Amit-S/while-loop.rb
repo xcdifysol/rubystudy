@@ -1,13 +1,13 @@
 # To take input from the user,
-n =  int(input("Enter a number: "))
-
+puts "Enter A Number : "
+n = gets.chomp.to_i
 # initialize sum and counter
 sum = 0
 i = 1
 
-while i <= n:
+while i <= n
     sum = sum + i
     i = i+1    # update counter
-
+end
 # print the sum
 print("The sum is", sum)

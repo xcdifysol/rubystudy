@@ -7,8 +7,9 @@ numbers = [6, 5, 3, 8, 4, 2, 5, 4, 11]
 sum = 0
 
 # iterate over the list
-for val in numbers:
-	sum = sum+val
+for val in numbers
+	sum = sum + val
+end
 
 # Output: The sum is 48
-print("The sum is", sum)
+puts  "Value of  sum is  #{sum}"

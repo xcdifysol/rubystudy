@@ -5,112 +5,60 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
-            "type": "python",
+            "name": "Debug Local File",
+            "type": "Ruby",
             "request": "launch",
-            "program": "${file}"
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/HelloWorld.rb"
         },
         {
-            "name": "Python: Attach",
-            "type": "python",
+            "name": "Listen for rdebug-ide",
+            "type": "Ruby",
             "request": "attach",
-            "localRoot": "${workspaceFolder}",
-            "remoteRoot": "${workspaceFolder}",
-            "port": 3000,
-            "secret": "my_secret",
-            "host": "localhost"
+            "cwd": "${workspaceRoot}",
+            "remoteHost": "127.0.0.1",
+            "remotePort": "1234",
+            "remoteWorkspaceRoot": "${workspaceRoot}"
         },
         {
-            "name": "Python: Terminal (integrated)",
-            "type": "python",
+            "name": "Rails server",
+            "type": "Ruby",
             "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "Python: Terminal (external)",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "externalTerminal"
-        },
-        {
-            "name": "Python: Django",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/manage.py",
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/bin/rails",
             "args": [
-                "runserver",
-                "--noreload",
-                "--nothreading"
-            ],
-            "debugOptions": [
-                "RedirectOutput",
-                "Django"
+                "server"
             ]
         },
         {
-            "name": "Python: Flask (0.11.x or later)",
-            "type": "python",
+            "name": "RSpec - all",
+            "type": "Ruby",
             "request": "launch",
-            "module": "flask",
-            "env": {
-                "FLASK_APP": "${workspaceFolder}/app.py"
-            },
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/bin/rspec",
             "args": [
-                "run",
-                "--no-debugger",
-                "--no-reload"
+                "-I",
+                "${workspaceRoot}"
             ]
         },
         {
-            "name": "Python: Module",
-            "type": "python",
+            "name": "RSpec - active spec file only",
+            "type": "Ruby",
             "request": "launch",
-            "module": "module.name"
-        },
-        {
-            "name": "Python: Pyramid",
-            "type": "python",
-            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/bin/rspec",
             "args": [
-                "${workspaceFolder}/development.ini"
-            ],
-            "debugOptions": [
-                "RedirectOutput",
-                "Pyramid"
+                "-I",
+                "${workspaceRoot}",
+                "${file}"
             ]
         },
         {
-            "name": "Python: Watson",
-            "type": "python",
+            "name": "Cucumber",
+            "type": "Ruby",
             "request": "launch",
-            "program": "${workspaceFolder}/console.py",
-            "args": [
-                "dev",
-                "runserver",
-                "--noreload=True"
-            ]
-        },
-        {
-            "name": "Python: All debug Options",
-            "type": "python",
-            "request": "launch",
-            "pythonPath": "${config:python.pythonPath}",
-            "program": "${file}",
-            "module": "module.name",
-            "env": {
-                "VAR1": "1",
-                "VAR2": "2"
-            },
-            "envFile": "${workspaceFolder}/.env",
-            "args": [
-                "arg1",
-                "arg2"
-            ],
-            "debugOptions": [
-                "RedirectOutput"
-            ]
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/bin/cucumber"
         }
     ]
 }
