@@ -25,7 +25,7 @@
             "type": "Ruby",
             "request": "launch",
             "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}/bin/rails",
+            "program": "${workspaceRoot}/app/bin/rails",
             "args": [
                 "server"
             ]
@@ -35,7 +35,7 @@
             "type": "Ruby",
             "request": "launch",
             "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}/bin/rspec",
+            "program": "${workspaceRoot}/app/bin/rspec",
             "args": [
                 "-I",
                 "${workspaceRoot}"
@@ -46,7 +46,7 @@
             "type": "Ruby",
             "request": "launch",
             "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}/bin/rspec",
+            "program": "${workspaceRoot}/app/bin/rspec",
             "args": [
                 "-I",
                 "${workspaceRoot}",
@@ -58,7 +58,7 @@
             "type": "Ruby",
             "request": "launch",
             "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}/bin/cucumber"
+            "program": "${workspaceRoot}/app/bin/cucumber"
         }
     ]
 }
