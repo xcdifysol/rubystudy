@@ -17,7 +17,7 @@ class Vehicle
 	end
 
 	def getType() # method
-		puts type
+		@type
 	end
 end
 
@@ -32,7 +32,7 @@ class Bike < Vehicle # inherit Vehicle
 	  end
 
 	def getColor()
-		puts color
+		@color
 	end
 end
 
@@ -47,7 +47,7 @@ class Car < Vehicle # inherit Vehicle
 	  end
 
 	def getColor()
-		puts color
+		@color
 	end
 end
 
@@ -68,4 +68,38 @@ elsif name == "bike"
 	
 else
   puts "We don't have this vehicle type"
+end
+
+RSpec.describe Vehicle do
+
+	it "should return type of vehicle truck and wheel count zero" do
+    expect(Vehicle.new("Truck").getType()).to eq("Truck")
+    expect(Vehicle.wheel_count).to eq(0)
+  end 
+
+  it "should return bike color red" do
+    expect(Bike.new("red").getColor()).to eq("red")
+  end
+
+  it "should return type Bike" do
+    expect(Bike.new("black").getType()).to eq("Bike")
+  end
+
+  it "should return wheel count 2" do
+  	bike = Bike.new("red")
+  	expect(Bike.wheel_count()).to eq(2)
+  end
+
+  it "should return Car color black" do
+    expect(Car.new("red").getColor()).to eq("red")
+  end
+
+  it "should return type Car" do
+    expect(Car.new("black").getType()).to eq("car")
+  end
+
+  it "should return wheel count 4" do
+  	bike = Car.new("red")
+  	expect(Car.wheel_count()).to eq(4)
+  end
 end
