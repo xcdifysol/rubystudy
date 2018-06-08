@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: react_devise_sample_development
+  host: localhost
+  username: amits
+  password: password1
+
+test:
+  <<: *default
+  database: react_devise_sample_test
+  host: localhost
+  username: amits
+  password: password1
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
+  pool: <%= ENV["DB_POOL"] || ENV['WEB_MAX_THREADS'] || 5 %>
