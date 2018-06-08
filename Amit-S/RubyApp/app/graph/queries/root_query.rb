@@ -1,8 +1,8 @@
 RootQuery = GraphQL::ObjectType.define do
   name 'RootQuery'
   description 'The query root of this schema'
-  field :hello do
+  field :profile do
     type !types.String
-    resolve -> obj, args, context { 'World' }
+    resolve -> obj, args, context { 'World_from demo qraphql' }
   end
 end

@@ -6,7 +6,7 @@ import {ViewHeading} from '../shared';
 const Home = ({currentUser, auth: {AuthLinks}}) => {
   return (
     <div>
-      <ViewHeading>Welcome to React Devise Sample!</ViewHeading>
+      <ViewHeading>Welcome to React On Rails!</ViewHeading>
       <AuthLinks />
     </div>
   );

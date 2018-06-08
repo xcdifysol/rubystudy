@@ -10,7 +10,7 @@ const Hello = ({data: {loading, hello}}) => {
   return (
     <div>
       <div>
-        <ViewHeading>Hello</ViewHeading>
+        <ViewHeading>Hello from react</ViewHeading>
         <p>{hello}</p>
       </div>
     </div>

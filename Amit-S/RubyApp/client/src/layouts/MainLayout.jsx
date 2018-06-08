@@ -102,7 +102,7 @@ class MainLayout extends Component {
     return (
       <div>
         <MainAppBar
-          title="React Devise Sample"
+          title="React on Rails"
           titleStyle={{fontSize: 28, fontWeight: 500}}
           iconElementLeft={<Logo />}
           onTitleTouchTap={this.goHome}

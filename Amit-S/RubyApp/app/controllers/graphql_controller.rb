@@ -4,7 +4,7 @@ class GraphqlController < ApiController
   end
 
   def index
-    result = Schema.execute params[:query], variables: params[:variables], context: context
+    result = Schema.execute params[:query] || 'hello', variables: params[:variables] || {}, context: context
     render json: result, status: result['errors'] ? 422 : 200
   end
 
